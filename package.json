@@ -1,0 +1,35 @@
+{
+  "name": "ReactNativeWebDemo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "web": "webpack-dev-server --config web/webpack.config.js --hot",
+    "web-build": "webpack -p --config web/webpack.prod.config.js",
+    "web-deploy": "firebase deploy",
+    "web-release": "yarn web-build && yarn web-deploy"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-native": "0.51.0",
+    "react-native-web": "^0.5.1"
+  },
+  "devDependencies": {
+    "babel-jest": "22.4.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-react-native-web": "^0.5.1",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.2",
+    "react-test-renderer": "16.0.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.1.0",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
